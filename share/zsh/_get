@@ -1,0 +1,46 @@
+#compdef get
+
+_get() {
+  local curcontext="$curcontext" state line
+  typeset -A opt_args
+
+  _arguments -C \
+    '1:command:(install uninstall list search info update upgrade doctor --version --help)' \
+    '*::arg:->args'
+
+  case $state in
+    args)
+      case $line[1] in
+        install)
+          _get_install
+          ;;
+        uninstall|remove|info)
+          _get_installed
+          ;;
+        search)
+          _get_formulae
+          ;;
+      esac
+      ;;
+  esac
+}
+
+_get_install() {
+  local -a formulae
+  formulae=(${(f)"$(ls /Users/samyak/.get/repo/*.rb 2>/dev/null | xargs -I{} basename {} .rb)"})
+  _describe 'formulae' formulae
+}
+
+_get_installed() {
+  local -a installed
+  installed=(${(f)"$(ls /Users/samyak/.get/apps/ 2>/dev/null | grep -v '^\.' | grep -v '^\.\.')"})
+  _describe 'installed' installed
+}
+
+_get_formulae() {
+  local -a formulae
+  formulae=(python node ripgrep git hello)
+  _describe 'formulae' formulae
+}
+
+_get
