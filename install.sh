@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# get — a brew-like package manager
+# get — a package manager
 # Install with:
 #   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/samyak/get/main/install.sh)"
 #
