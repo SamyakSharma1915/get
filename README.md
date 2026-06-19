@@ -1,14 +1,11 @@
-# get — a brew-like package manager
+# get — a package manager
 
-A simple, extensible package manager for macOS (and Linux), inspired by Homebrew.
+A simple, extensible package manager for macOS (and Linux).
 
 ## Install
 
 ```bash
-mkdir -p ~/.get/{bin,apps,cache,logs,repo,taps,share/zsh}
-cp bin/get ~/.get/bin/
-chmod +x ~/.get/bin/get
-export PATH="$HOME/.get/bin:$PATH"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/SamyakSharma1915/get/main/install.sh)"
 ```
 
 Or just run `get setup` after cloning.
