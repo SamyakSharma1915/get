@@ -2,7 +2,7 @@
 #
 # get — a package manager
 # Install with:
-#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/samyak/get/main/install.sh)"
+#   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/SamyakSharma1915/get/main/install.sh)"
 #
 
 set -euo pipefail
