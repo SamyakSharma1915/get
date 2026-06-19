@@ -51,7 +51,7 @@ module Get
 
     def self.install_script
       <<~BASH
-        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/samyak/get/main/install.sh)"
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/SamyakSharma1915/get/main/install.sh)"
       BASH
     end
   end
